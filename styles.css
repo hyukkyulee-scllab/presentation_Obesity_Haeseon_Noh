@@ -1,0 +1,240 @@
+/* 기본 폰트 설정 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 슬라이드 스타일 */
+.reveal h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.reveal h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.reveal h3 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+/* 애니메이션 효과 */
+.title-animate {
+    animation: fadeInUp 1s ease-out;
+}
+
+.subtitle-animate {
+    animation: fadeInUp 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.author-animate {
+    animation: fadeInUp 1s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+
+.institution-animate {
+    animation: fadeInUp 1s ease-out 1.5s;
+    animation-fill-mode: backwards;
+}
+
+/* 팩트 컨테이너 */
+.facts-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+
+.fact {
+    text-align: center;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 0 1em;
+    transition: transform 0.3s ease;
+}
+
+.fact:hover {
+    transform: translateY(-10px);
+}
+
+.fact i {
+    color: #4CAF50;
+    margin-bottom: 0.5em;
+}
+
+/* 차트 컨테이너 */
+.chart-container {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* 위험 아이템 */
+.risk-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+
+.risk-item {
+    text-align: center;
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.risk-item:hover {
+    transform: scale(1.05);
+}
+
+.risk-multiplier {
+    font-size: 1.5em;
+    color: #FF5252;
+    font-weight: bold;
+}
+
+/* 질병 그리드 */
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.disease-category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.disease-category i {
+    font-size: 2em;
+    color: #64B5F6;
+    margin-bottom: 0.5em;
+}
+
+.disease-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.disease-category li {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+
+/* 진단 컨테이너 */
+.diagnosis-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.diagnosis-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.measurement-info {
+    margin-top: 1em;
+}
+
+/* 치료 컨테이너 */
+.treatment-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.treatment-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.treatment-item ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* 결론 포인트 */
+.conclusion-points {
+    text-align: left;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+.conclusion-points p {
+    margin: 1em 0;
+    font-size: 1.2em;
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+
+.conclusion-points p:nth-child(1) { animation-delay: 0.5s; }
+.conclusion-points p:nth-child(2) { animation-delay: 1s; }
+.conclusion-points p:nth-child(3) { animation-delay: 1.5s; }
+.conclusion-points p:nth-child(4) { animation-delay: 2s; }
+
+/* 애니메이션 키프레임 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 차트 캡션 */
+.chart-caption {
+    font-size: 1em;
+    color: #aaa;
+    margin: 0.5em 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .facts-container,
+    .risk-container,
+    .treatment-container {
+        flex-direction: column;
+    }
+    
+    .disease-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fact,
+    .risk-item,
+    .treatment-item {
+        margin: 1em 0;
+    }
+}

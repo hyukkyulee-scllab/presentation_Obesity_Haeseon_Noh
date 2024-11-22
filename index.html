@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만은 치료가 필요한 질병</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .reveal .controls {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        .reveal .slide-number {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- 타이틀 슬라이드 -->
+            <section data-background-gradient="linear-gradient(45deg, #1a237e, #311b92)">
+                <h1 class="title-animate">비만은 치료가 필요한 질병입니다</h1>
+                <p class="author-animate">하나로의료재단 가정의학과</p>
+                <p class="institution-animate">전문의 노혜선</p>
+            </section>
+
+            <!-- 주요 사실 슬라이드 -->
+            <section>
+                <div class="facts-container">
+                    <div class="fact">
+                        <i class="fas fa-male fa-3x"></i>
+                        <h3>성인 남성 2명 중 1명</h3>
+                        <p>비만으로 고통받고 있습니다</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-virus fa-3x"></i>
+                        <h3>코로나19 대유행</h3>
+                        <p>비만 환자 수 증가</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-exclamation-triangle fa-3x"></i>
+                        <h3>다양한 질병의 원인</h3>
+                        <p>심각한 건강 위험</p>
+                    </div>
+                </div>
+                <div class="warning-text">
+                    <h2>그런데도 왜 가볍게 생각하시나요?</h2>
+                </div>
+            </section>
+
+            <!-- 통계 차트 -->
+            <section>
+                <h2>우리나라 성인 비만 유병률 추이 (2013-2022)</h2>
+                <div class="chart-container">
+                    <canvas id="obesityChart"></canvas>
+                </div>
+                <p class="chart-caption">최근 10년간 지속적 증가: 30.6% → 38.4%</p>
+                <p class="chart-caption">특히 남성: 37.9% → 49.6% (1.3배 증가)</p>
+            </section>
+
+            <!-- 건강 위험 -->
+            <section data-background="#1a1a1a">
+                <h2>비만으로 인한 건강 위험</h2>
+                <div class="risk-container">
+                    <div class="risk-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>당뇨병</h3>
+                        <p class="risk-multiplier">2.5-9.5배</p>
+                    </div>
+                    <div class="risk-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>고혈압</h3>
+                        <p class="risk-multiplier">2.0-5.2배</p>
+                    </div>
+                    <div class="risk-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>심근경색</h3>
+                        <p class="risk-multiplier">1.2-2.1배</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 관련 질환 -->
+            <section data-background-gradient="linear-gradient(45deg, #006064, #00838f)">
+                <h2>비만 관련 질환</h2>
+                <div class="disease-grid">
+                    <div class="disease-category">
+                        <i class="fas fa-brain"></i>
+                        <h3>뇌</h3>
+                        <ul>
+                            <li>허혈성 뇌경색</li>
+                            <li>특발성 두개 내압 상승</li>
+                            <li>치매, 우울증, 불안장애</li>
+                        </ul>
+                    </div>
+                    <div class="disease-category">
+                        <i class="fas fa-heart"></i>
+                        <h3>심장</h3>
+                        <ul>
+                            <li>관상동맥질환</li>
+                            <li>고혈압</li>
+                            <li>심부전</li>
+                        </ul>
+                    </div>
+                    <div class="disease-category">
+                        <i class="fas fa-lungs"></i>
+                        <h3>호흡기</h3>
+                        <ul>
+                            <li>천식</li>
+                            <li>수면무호흡증</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 진단 기준 -->
+            <section>
+                <h2>비만 진단 기준</h2>
+                <div class="diagnosis-container">
+                    <div class="diagnosis-item">
+                        <i class="fas fa-weight"></i>
+                        <h3>체질량지수 (BMI)</h3>
+                        <div class="measurement-info">
+                            <p>체중(kg) ÷ 키(m)²</p>
+                        </div>
+                    </div>
+                    <div class="diagnosis-item">
+                        <i class="fas fa-ruler-horizontal"></i>
+                        <h3>허리둘레</h3>
+                        <div class="measurement-info">
+                            <p>남성: 90cm 이상</p>
+                            <p>여성: 85cm 이상</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 치료 방법 -->
+            <section>
+                <h2>비만 치료</h2>
+                <div class="treatment-container">
+                    <div class="treatment-item">
+                        <i class="fas fa-utensils"></i>
+                        <h3>생활습관 개선</h3>
+                        <p>식이요법과 운동요법</p>
+                    </div>
+                    <div class="treatment-item">
+                        <i class="fas fa-pills"></i>
+                        <h3>약물치료</h3>
+                        <ul>
+                            <li>식욕억제제</li>
+                            <li>지방분해효소 억제제</li>
+                            <li>GLP-1 유사체</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 결론 -->
+            <section data-background-gradient="linear-gradient(45deg, #1a237e, #311b92)">
+                <h2>비만은 질병입니다</h2>
+                <div class="conclusion-points">
+                    <p>✓ 건강을 심각하게 위협하는 질병</p>
+                    <p>✓ 사회적, 경제적 손실을 초래</p>
+                    <p>✓ 합병증 발생 전 적극적인 치료 필요</p>
+                    <p>✓ 전문의와 상담하여 체계적인 관리 필요</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation-controls"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/search/search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
